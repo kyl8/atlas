@@ -1,0 +1,12 @@
+{
+  "name": "atlas",
+  "version-string": "1.0.0",
+  "builtin-baseline": "7ff71c68261ecf3b60cdb8772f2e6759ee0a71b1",
+  "dependencies": ["lua", "sol2"],
+  "overrides": [
+    {
+      "name": "lua",
+      "version": "5.4.8"
+    }
+  ]
+}

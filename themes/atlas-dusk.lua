@@ -1,0 +1,40 @@
+return {
+    name = "Atlas Dusk",
+    author = "Atlas",
+    palette = {
+        blue = "#8CAEF0",
+        green = "#A8C9A0",
+        lavender = "#BBAAD6",
+        muted = "#9096A4",
+        peach = "#E8B9A0",
+        rose = "#D9A3AE",
+        text = "#E2E5EC"
+    },
+    art = { type = "builtin", width = 24 },
+    styles = {
+        primary = { fg = "text" },
+        secondary = { fg = "#BAC1D0" },
+        accent = { fg = "blue", bold = true },
+        heading = { fg = "blue", bold = true },
+        muted = { fg = "muted" },
+        subtle = { fg = "#454E61" },
+        success = { fg = "green", bold = true },
+        warning = { fg = "peach" },
+        error = { fg = "rose", bold = true },
+        info = { fg = "blue" },
+        path = { fg = "blue" },
+        url = { fg = "blue", underline = true },
+        command = { fg = "lavender" },
+        number = { fg = "lavender" },
+        date = { fg = "muted" },
+        size = { fg = "peach" },
+        duration = { fg = "green" },
+        highlight = { fg = "rose", bold = true },
+        table_header = { fg = "blue", bold = true },
+        table_border = { fg = "#454E61" },
+        progress_fill = { fg = "blue" },
+        progress_track = { fg = "#454E61" },
+        spinner = { fg = "lavender" },
+        selection = { fg = "text", bg = "#343A49", bold = true }
+    }
+}

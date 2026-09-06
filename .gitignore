@@ -1,0 +1,32 @@
+# Build and IDE output
+/out/
+/build/
+/tests/
+/benchmarks/
+/.vs/
+/.vscode/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+Testing/
+/docs/terminal-ux.md
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Native build products and transient files
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+*.ilk
+*.tmp
+*.lock
+compile_commands.json
+
+# Local tooling and operating-system files
+/.atlas/
+.DS_Store
+Thumbs.db
