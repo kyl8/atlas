@@ -28,6 +28,11 @@ struct RenderedArt {
     std::size_t height{};
 };
 
+std::string reserve_image_rows(const std::size_t rows) {
+    // Scroll before saving the cursor so the image and text start on the same row.
+    return std::string(rows, '\n') + "\x1b[" + std::to_string(rows) + 'F';
+}
+
 std::size_t automatic_art_width(const Ui& ui, const std::size_t columns) {
     return ui.width() > 54
         ? (std::min)((std::min)(std::size_t{56}, ui.width() - 50), columns)
@@ -216,6 +221,7 @@ void Ui::identity(const Identity& value) {
         constexpr auto art_indent = std::size_t{0};
         constexpr auto art_gap = std::size_t{4};
         if (!art.sixel.empty()) {
+            output += reserve_image_rows(art.height);
             output += "\x1b[s\x1b[3G" + art.sixel + "\x1b[u";
             for (std::size_t index = 0; index < rows; ++index) {
                 output += "\x1b[" + std::to_string(art_width + 6) + 'G';
@@ -236,6 +242,7 @@ void Ui::identity(const Identity& value) {
         // Small consoles keep the information; a large illustration never dominates the screen.
         if (height() >= 32 && art.height != 0) {
             if (!art.sixel.empty()) {
+                output += reserve_image_rows(art.height);
                 output += "\x1b[s  " + art.sixel + "\x1b[u";
                 output.append(art.height, '\n');
             } else {

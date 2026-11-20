@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(atlas VERSION 1.0.0 LANGUAGES CXX)
+project(atlas VERSION 1.0.1 LANGUAGES CXX)
 
 if(NOT WIN32)
     message(FATAL_ERROR "Atlas currently supports Windows only")

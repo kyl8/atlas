@@ -22,7 +22,7 @@
 namespace atlas {
 namespace {
 
-constexpr std::string_view version = "1.0";
+constexpr std::string_view version = "1.0.1";
 
 terminal::OutputOptions output_options(const cli::Invocation& invocation) {
     terminal::OutputOptions options;
